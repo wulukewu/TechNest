@@ -55,7 +55,7 @@ For local development, the easiest method is to use Docker Compose, which will s
     ```sh
     docker-compose up --build
     ```
-3.  The application will be available at `http://localhost:80`.
+3.  The application will be available at `http://localhost:8000`.
 
 ### 2. Running a Standalone Container
 
@@ -70,14 +70,14 @@ You **must** provide the database connection environment variables for the conta
 
 2.  **Run the image** and provide your database credentials as environment variables (`-e`):
     ```sh
-    docker run --rm -p 80:80 \
+    docker run --rm -p 8000:80 \
       -e PORT=80 \
       -e DATABASE_CONNECTION_STRING="mongodb+srv://<YOUR_ACCOUNT_NAME>:{db_password}@<YOUR_CLUSTER_URL>/?appName=<YOUR_DB_NAME>" \
       -e DATABASE_PASSWORD="<YOUR_DATABASE_PASSWORD>" \
       ghcr.io/wulukewu/technest:latest
     ```
 
-    The application will be available at `http://localhost:80`.
+    The application will be available at `http://localhost:8000`.
 
 <h1>©Copyright Notice </h1>
 <p>This work is licensed under Creative Commons Attribution-NonCommercial 4.0 International.</p>
