@@ -17,4 +17,4 @@ jobs:
         with:
           release-type: node
           package-name: technest
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PAT }}
