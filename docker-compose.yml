@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "8000:80"
+    environment:
+      - PORT=80
+      - DATABASE_CONNECTION_STRING=mongodb://technest_user:{db_password}@mongo:27017/technest?authSource=admin
+      - DATABASE_PASSWORD=secret
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:5.0
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=technest_user
+      - MONGO_INITDB_ROOT_PASSWORD=secret
+      - MONGO_INITDB_DATABASE=technest
+    volumes:
+      - mongodb_data:/data/db
+
+volumes:
+  mongodb_data:

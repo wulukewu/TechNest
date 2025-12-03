@@ -1,0 +1,18 @@
+# Git
+.git
+.gitignore
+
+# Docker
+Dockerfile
+.dockerignore
+
+# Node
+node_modules
+npm-debug.log
+
+# Project files
+README.md
+config.env
+
+# OS-specific
+.DS_Store
