@@ -4,7 +4,7 @@ services:
   app:
     build: .
     ports:
-      - "5080:80"
+      - "8000:80"
     environment:
       - PORT=80
       - DATABASE_CONNECTION_STRING=mongodb://technest_user:{db_password}@mongo:27017/technest?authSource=admin

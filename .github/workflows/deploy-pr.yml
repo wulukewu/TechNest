@@ -41,15 +41,13 @@ jobs:
           script: |
             const image = `${{ env.GHCR_REGISTRY }}/${{ env.IMAGE_NAME }}:pr-${{ github.event.pull_request.number }}`;
             const comment_identifier = "<!-- docker-image-comment -->";
-            const comment = `
-              🚀 Docker image built successfully!
-
-              - Image: 
-                ${image}
-
-              ${comment_identifier}
-            `;
-            const { data: comments } = await github.rest.issues.listComments({
+                        const comment = `
+                          🚀 Docker image built successfully!
+            
+                          - Image: \`${image}\`
+            
+                          ${comment_identifier}
+                        `;            const { data: comments } = await github.rest.issues.listComments({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.issue.number,
