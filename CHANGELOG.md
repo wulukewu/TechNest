@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/wulukewu/technest/compare/v1.0.1...v1.0.2) (2025-12-03)
+
+
+### Bug Fixes
+
+* docker port ([18af74b](https://github.com/wulukewu/technest/commit/18af74bc81fa3e870082eed5b272297f3ce85deb))
+
 ## [1.0.1](https://github.com/wulukewu/technest/compare/v1.0.0...v1.0.1) (2025-12-03)
 
 
